@@ -314,6 +314,7 @@
   .header__title,
   .footer__title {
     font-size: clamp(11rem, 10.5rem + 2vw, 12.5rem);
+  }
 }
 
 /* Адаптивность для десктопа */
