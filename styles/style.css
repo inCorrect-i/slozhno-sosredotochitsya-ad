@@ -1,10 +1,12 @@
-/* style.css - исправленная версия */
 .page {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -101,7 +103,7 @@
 
 .header__title {
   color: var(--title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(11rem, 10.5rem + 2vw, 12.5rem);
   font-weight: bold;
   line-height: 0.825;
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -140,6 +142,9 @@
   font-size: inherit;
   font-weight: bold;
 }
+.gallery__title {
+  color: var(--bg-color);
+}
 
 .concentration__content,
 .solutions__content,
@@ -174,16 +179,8 @@
   border: 1px solid var(--text-color);
 }
 
-.gallery__images {
-  display: grid;
-  gap: 20px;
-}
 
-.gallery__image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
 
 .footer {
   position: relative;
@@ -195,11 +192,13 @@
 
 .footer__title {
   color: var(--title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(11rem, 10.5rem + 2vw, 12.5rem);
   font-weight: bold;
   line-height: 0.825;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
+
+
 
 .focus__content {
   display: grid;
@@ -221,6 +220,18 @@
 .focus__step-text:last-child {
   margin-bottom: 0;
 }
+
+.gallery__images {
+  display: grid;
+  gap: 20px;
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 
 /* Адаптивность для планшетов */
 @media (min-width: 768px) {
@@ -302,8 +313,7 @@
   
   .header__title,
   .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
+    font-size: clamp(11rem, 10.5rem + 2vw, 12.5rem);
 }
 
 /* Адаптивность для десктопа */
