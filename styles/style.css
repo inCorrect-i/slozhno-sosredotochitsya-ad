@@ -31,23 +31,23 @@
 }
 
 .decorated-zone::before {
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
 }
 
 .decorated-zone::after {
-  bottom: 20px;
-  left: 20px;
+  bottom: 10px;
+  left: 10px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
 }
 
 .header__decoration {
   position: absolute;
-  top: 20px;
-  right: 48px;
+  top: 10px;
+  right: 38px;
   color: var(--accent-color);
   font-size: var(--font-size);
 }
@@ -72,16 +72,19 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  margin-right: 32px; /* Добавляем отступ слева */
+  margin-top: 35px; /* Добавляем отступ слева */
 }
 
 .header__theme-menu-button {
   background: transparent;
   border: none;
-  padding: 0 13px;
+  padding: 2px 13px;
   color: var(--accent-color);
   cursor: pointer;
   line-height: 1;
+  text-align: center; /* Добавляем выравнивание по центру */
 }
 
 .header__theme-menu-button:hover {
@@ -109,14 +112,23 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   justify-self: start;
   margin-left: 0;
-  width: max-content;
-   word-spacing: 0.2em;
+  max-width: none; /* Убираем ограничение по ширине */
+  width: calc(100% - 40px); /* Растягиваем между уголками (20px слева + 20px справа) */
+  justify-self: center; /* Центрируем */
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  box-sizing: border-box;
 }
 
 .header__text {
-  max-width: 50%;
+  /*max-width: 50%;*/
   justify-self: end;
   font-weight: bold;
+  align-self: end; /* Это опустит элемент вниз */
+  margin-bottom: 66px; /* Теперь margin будет работать */
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .title-decor {
@@ -125,7 +137,7 @@
 }
 
 .main {
-  padding: 60px 20px;
+  padding: 40px 10px;
   display: grid;
   gap: 80px;
 }
@@ -135,7 +147,7 @@
 .focus,
 .gallery {
   display: grid;
-  gap: 20px;
+  gap: 45px;
 }
 
 .concentration__title,
@@ -146,6 +158,11 @@
   font-size: inherit;
   font-weight: bold;
 }
+
+.concentration__title {
+
+}
+
 .gallery__title {
   color: var(--bg-color);
 }
@@ -319,6 +336,8 @@
   .footer__title {
     font-size: clamp(9rem, 6rem + 6vw, 15rem);
   }
+  
+
 }
 
 /* Адаптивность для десктопа */
@@ -382,4 +401,6 @@
   .header__theme-menu-list {
     flex-direction: row;
   }
+  
+
 }
